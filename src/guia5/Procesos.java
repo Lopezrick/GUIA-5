@@ -1,0 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package guia5;
+
+/**
+ *
+ * @author RICK LOPEZ
+ */
+public class Procesos {
+    private double radio;
+    private double arista;
+    private double area;
+    private double volumen;
+    private double perimetro;
+
+   
+}
