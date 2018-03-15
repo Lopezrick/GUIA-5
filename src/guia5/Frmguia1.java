@@ -6,6 +6,8 @@
 
 package guia5;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author RICK LOPEZ
@@ -15,6 +17,9 @@ public class Frmguia1 extends javax.swing.JFrame {
     /** Creates new form Frmguia1 */
     public Frmguia1() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setTitle("App guia 1");
     }
 
     /** This method is called from within the constructor to
@@ -26,21 +31,148 @@ public class Frmguia1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        area = new javax.swing.JButton();
+        perimetro = new javax.swing.JButton();
+        volumenE = new javax.swing.JButton();
+        volumenC = new javax.swing.JButton();
+        media = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("¿Que desea calcular?");
+
+        area.setText("Area de un cuadrilatero");
+        area.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                areaActionPerformed(evt);
+            }
+        });
+
+        perimetro.setText("Perimetro de un circulo");
+        perimetro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                perimetroActionPerformed(evt);
+            }
+        });
+
+        volumenE.setText("Volumen de una esfera");
+        volumenE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volumenEActionPerformed(evt);
+            }
+        });
+
+        volumenC.setText("Volumen de un cubo");
+        volumenC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volumenCActionPerformed(evt);
+            }
+        });
+
+        media.setText("Promedio de 10 datos");
+        media.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mediaActionPerformed(evt);
+            }
+        });
+
+        salir.setText("salir");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(media)
+                            .addComponent(volumenC)
+                            .addComponent(volumenE)
+                            .addComponent(perimetro)
+                            .addComponent(area)
+                            .addComponent(jLabel1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(salir)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(area)
+                .addGap(18, 18, 18)
+                .addComponent(perimetro)
+                .addGap(18, 18, 18)
+                .addComponent(volumenE)
+                .addGap(18, 18, 18)
+                .addComponent(volumenC)
+                .addGap(18, 18, 18)
+                .addComponent(media)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(salir)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void areaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaActionPerformed
+        double area;
+        Procesos a=new Procesos();
+        area=a.getArea();
+        JOptionPane.showMessageDialog(null,"Area= "+area+" unidades cuadradas");
+    }//GEN-LAST:event_areaActionPerformed
+
+    private void perimetroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perimetroActionPerformed
+     double perimetro;
+        Procesos p=new Procesos();
+        p.getRadio();
+        perimetro=p.getPerimetro();
+        JOptionPane.showMessageDialog(null,"Perimetro= "+perimetro+" unidades");
+    }//GEN-LAST:event_perimetroActionPerformed
+
+    private void volumenEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volumenEActionPerformed
+        // TODO add your handling code here:
+        double vol;
+        Procesos v=new Procesos();
+        v.getRadio();
+        vol=v.getVolumenesfera();
+        JOptionPane.showMessageDialog(null,"Volumen= "+vol+" unidades cubicas");
+    }//GEN-LAST:event_volumenEActionPerformed
+
+    private void volumenCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volumenCActionPerformed
+        // TODO add your handling code here:
+        double cubo;
+        Procesos v=new Procesos();
+        v.getArista();
+        cubo=v.getVolumencubo();
+        JOptionPane.showMessageDialog(null,"Volumen= "+cubo+" unidades cubicas");
+    }//GEN-LAST:event_volumenCActionPerformed
+
+    private void mediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mediaActionPerformed
+        // TODO add your handling code here:
+        Procesos pro=new Procesos();
+        pro.llenarVector();
+        
+        JOptionPane.showMessageDialog(null,"Promedio= "+pro.getPromedio()+" unidades");
+    }//GEN-LAST:event_mediaActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,6 +210,13 @@ public class Frmguia1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton area;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton media;
+    private javax.swing.JButton perimetro;
+    private javax.swing.JButton salir;
+    private javax.swing.JButton volumenC;
+    private javax.swing.JButton volumenE;
     // End of variables declaration//GEN-END:variables
 
 }

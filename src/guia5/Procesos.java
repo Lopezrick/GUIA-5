@@ -40,14 +40,25 @@ public class Procesos {
    }
 
     public double getRadio() {
+        double r;
+        do{
+        r=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));    
+        }while(r<=0);
+        radio=r;
         return radio;
     }
 
     public void setRadio(double radio) {
+        
         this.radio = radio;
     }
 
     public double getArista() {
+         double r;
+        do{
+        r=Double.parseDouble(JOptionPane.showInputDialog("Ingrese la arista"));    
+        }while(r<=0);
+        arista=r;
         return arista;
     }
 
@@ -56,10 +67,20 @@ public class Procesos {
     }
 
     public double getArea() {
+        double l1;
+        double l2;
+        do{
+            l1=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el primer lado de la figura"));
+        }while(l1<=0);
+        do{
+            l2=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el segundo lado de la figura"));
+        }while(l2<=0);
+        area=l1*l2;
         return area;
     }
 
     public void setArea(double area) {
+        
         this.area = area;
     }
 
@@ -91,6 +112,7 @@ public class Procesos {
     }
 
     public double getPromedio() {
+        
          double suma=0;
         double media=0;
         for(int i=0;i<10;i++){

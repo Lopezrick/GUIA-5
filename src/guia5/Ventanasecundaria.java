@@ -16,6 +16,8 @@ public class Ventanasecundaria extends javax.swing.JFrame {
      */
     public Ventanasecundaria() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Acciones");
     }
 
     /**
@@ -27,7 +29,7 @@ public class Ventanasecundaria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        guia1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -35,7 +37,12 @@ public class Ventanasecundaria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("App guia 1");
+        guia1.setText("App guia 1");
+        guia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guia1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("App guia 2");
 
@@ -55,38 +62,38 @@ public class Ventanasecundaria extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGap(46, 46, 46)
+                .addComponent(guia1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(86, 86, 86))
+                .addGap(46, 46, 46))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton3)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(104, 104, 104)
+                            .addComponent(jLabel1)
+                            .addGap(1, 1, 1)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addComponent(salir))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(jButton3)))
+                        .addGap(131, 131, 131)
+                        .addComponent(salir)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(55, 55, 55)
                 .addComponent(jLabel1)
-                .addGap(88, 88, 88)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(guia1)
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(salir)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -98,6 +105,14 @@ public class Ventanasecundaria extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_salirActionPerformed
+
+    private void guia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guia1ActionPerformed
+        // TODO add your handling code here:
+        Frmguia1 objeto=new Frmguia1();
+        setVisible(false);
+        dispose();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_guia1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,7 +150,7 @@ public class Ventanasecundaria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton guia1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
