@@ -16,6 +16,12 @@ public class Guia5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Procesos n= new Procesos();
+        n.llenarVector();
+        n.getPromedio();
+        String salida = ""+n.getPromedio();
+        System.out.println(salida);
+        
     }
     
 }
