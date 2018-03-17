@@ -18,6 +18,9 @@ public class Frmguia3y4 extends javax.swing.JFrame {
      */
     public Frmguia3y4() {
         initComponents();
+        txtpixels.setEnabled(false);
+        setLocationRelativeTo(null);
+        setTitle("App guia 3 y 4");
     }
 
     /**
@@ -43,10 +46,11 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        pricipal = new javax.swing.JCheckBox();
+        secundaria = new javax.swing.JCheckBox();
+        flash = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
+        txtpixels = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,6 +89,11 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
 
+        txtram.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtramActionPerformed(evt);
+            }
+        });
         txtram.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtramKeyTyped(evt);
@@ -116,21 +125,37 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
         jLabel8.setText("Camaras:");
 
-        jCheckBox1.setText("Principal");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        pricipal.setText("Principal");
+        pricipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                pricipalActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Secundaria");
+        secundaria.setText("Secundaria");
+        secundaria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                secundariaActionPerformed(evt);
+            }
+        });
 
-        jCheckBox3.setText("Flash");
+        flash.setText("Flash");
+        flash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                flashActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Ejecutar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        txtpixels.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpixelsKeyTyped(evt);
             }
         });
 
@@ -163,12 +188,6 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                                             .addComponent(txtgarantia, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
                                             .addComponent(txtprecio)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(jLabel8)
-                                            .addGap(31, 31, 31)
-                                            .addComponent(jCheckBox1)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jCheckBox2))
                                         .addGroup(layout.createSequentialGroup()
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel2)
@@ -177,9 +196,18 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(txtram, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
                                                 .addComponent(txtpantalla)))
-                                        .addComponent(txtnucleos, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtnucleos, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel8)
+                                            .addGap(31, 31, 31)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(pricipal)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(secundaria))
+                                                .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGap(10, 10, 10)
-                                .addComponent(jCheckBox3))))
+                                .addComponent(flash))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(145, 145, 145)
                         .addComponent(jButton1)))
@@ -217,10 +245,12 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
-                .addGap(48, 48, 48)
+                    .addComponent(pricipal)
+                    .addComponent(secundaria)
+                    .addComponent(flash))
+                .addGap(10, 10, 10)
+                .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(58, Short.MAX_VALUE))
         );
@@ -228,9 +258,11 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void pricipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pricipalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+        txtpixels.setEnabled(true);
+        txtpixels.requestFocus();
+    }//GEN-LAST:event_pricipalActionPerformed
 
     private void txtpantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpantallaActionPerformed
         // TODO add your handling code here:
@@ -246,18 +278,37 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
     int contador=0;
     private void txtnucleosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnucleosKeyTyped
-         char cpu = evt.getKeyChar();
-
-        if (!Character.isDigit(cpu) || txtnucleos.getText().length() > 1) {
-            evt.consume();
+        char tecla=evt.getKeyChar();
+        int car=(int)evt.getKeyChar();
+        
+        if(txtnucleos.getText().length()==0 ){
+            if(car<49 || car>57 ){
+                if(car==8){
+                    
+                }
+                else{
+                  evt.consume();    
+                }
+              
+            }
+           
         }
-
-        if (txtnucleos.getText().length() == 1) {
-            if (cpu >'2') {
+         if(txtnucleos.getText().length()==1){
+             
+             int c=(int)txtnucleos.getText().charAt(0);
+            if(c==49){
+                if(car<48 || car>50){
+                 evt.consume();   
+                }
+            }
+            else {
                 evt.consume();
             }
-        }
+         }
         
+        if(txtnucleos.getText().length()>1){
+             evt.consume();
+         }
         
     }//GEN-LAST:event_txtnucleosKeyTyped
 
@@ -298,6 +349,15 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         if(txtpantalla.getText().length()>2){
              evt.consume();
          }
+        if(car==46){
+            for(int i=0;i<txtpantalla.getText().length();i++){
+              int posicion=(int)txtpantalla.getText().charAt(i);
+              if(posicion==46){
+                  evt.consume();
+              }
+            }
+            
+        }
     }//GEN-LAST:event_txtpantallaKeyTyped
 
     private void txtpantallaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpantallaKeyPressed
@@ -341,6 +401,15 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         if(txtram.getText().length()>2){
              evt.consume();
          }
+        if(car==46){
+            for(int i=0;i<txtram.getText().length();i++){
+              int posicion=(int)txtram.getText().charAt(i);
+              if(posicion==46){
+                  evt.consume();
+              }
+            }
+            
+        }
     }//GEN-LAST:event_txtramKeyTyped
 
     private void txtgarantiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtgarantiaKeyTyped
@@ -421,13 +490,84 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
             
          }
+        if(txtprecio.getText().length()==3){
+            boolean punto=false;
+           for(int i=0;i<txtprecio.getText().length();i++){
+              int posicion=(int)txtprecio.getText().charAt(i);
+              if(posicion==46 || car==46){
+                  punto=true;
+              }
+            }
+           if(punto==false){
+               evt.consume();
+           }
+        }
+        if(car==46){
+            for(int i=0;i<txtprecio.getText().length();i++){
+              int posicion=(int)txtprecio.getText().charAt(i);
+              if(posicion==46){
+                  evt.consume();
+              }
+            }
+            
+        }
         if(txtprecio.getText().length()>5){
              evt.consume();
          }
+        
         else{
             
         }
     }//GEN-LAST:event_txtprecioKeyTyped
+
+    private void txtramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtramActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtramActionPerformed
+
+    private void secundariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_secundariaActionPerformed
+        // TODO add your handling code here:
+         txtpixels.setEnabled(true);
+        txtpixels.requestFocus();
+    }//GEN-LAST:event_secundariaActionPerformed
+
+    private void flashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_flashActionPerformed
+        // TODO add your handling code here:
+         txtpixels.setEnabled(true);
+        txtpixels.requestFocus();
+    }//GEN-LAST:event_flashActionPerformed
+
+    private void txtpixelsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpixelsKeyTyped
+        // TODO add your handling code here:
+        int car=(int)evt.getKeyChar();
+       
+        if(txtpixels.getText().length()==0 ){
+            if(car<48 || car>57 ){
+                if(car==8){
+                    
+                }
+                else{
+                  evt.consume();    
+                }
+              
+            }
+           
+        }
+         if(txtpixels.getText().length()!=0){
+            if(car==46){
+                for(int i=0;i<txtpixels.getText().length();i++){
+              int posicion=(int)txtpixels.getText().charAt(i);
+              if(posicion==46){
+                  evt.consume();
+              }
+            }
+            }
+         }
+         if(txtpixels.getText().length()>3){
+             evt.consume();
+         }
+        
+        
+    }//GEN-LAST:event_txtpixelsKeyTyped
 
     /**
      * @param args the command line arguments
@@ -465,10 +605,8 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox flash;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -478,9 +616,12 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JCheckBox pricipal;
+    private javax.swing.JCheckBox secundaria;
     private javax.swing.JTextField txtgarantia;
     private javax.swing.JTextField txtnucleos;
     private javax.swing.JTextField txtpantalla;
+    private javax.swing.JTextField txtpixels;
     private javax.swing.JTextField txtprecio;
     private javax.swing.JTextField txtram;
     // End of variables declaration//GEN-END:variables
