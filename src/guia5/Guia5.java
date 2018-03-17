@@ -15,12 +15,8 @@ public class Guia5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Procesos n= new Procesos();
-        n.llenarVector();
-        n.getPromedio();
-        String salida = ""+n.getPromedio();
-        System.out.println(salida);
+        Ventanasistema guia = new Ventanasistema();
+        guia.setVisible(true);
         
     }
     
