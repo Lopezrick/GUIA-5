@@ -36,9 +36,9 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtnucleos = new javax.swing.JTextField();
         txtpantalla = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        txtram = new javax.swing.JTextField();
+        txtgarantia = new javax.swing.JTextField();
+        txtprecio = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -85,9 +85,26 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        txtram.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtramKeyTyped(evt);
+            }
+        });
+
+        txtgarantia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtgarantiaKeyTyped(evt);
+            }
+        });
+
+        txtprecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                txtprecioActionPerformed(evt);
+            }
+        });
+        txtprecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprecioKeyTyped(evt);
             }
         });
 
@@ -143,8 +160,8 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                                             .addComponent(jLabel4))
                                         .addGap(62, 62, 62)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                            .addComponent(jTextField5)))
+                                            .addComponent(txtgarantia, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                            .addComponent(txtprecio)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                             .addComponent(jLabel8)
@@ -158,7 +175,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                                                 .addComponent(jLabel3))
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                                .addComponent(txtram, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
                                                 .addComponent(txtpantalla)))
                                         .addComponent(txtnucleos, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(10, 10, 10)
@@ -184,15 +201,15 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtram, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtgarantia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -219,9 +236,9 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpantallaActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprecioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtprecioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -251,21 +268,166 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
     private void txtpantallaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpantallaKeyTyped
         // TODO add your handling code here:
-         
-        
+         char tecla=evt.getKeyChar();
+        int car=(int)evt.getKeyChar();
+        System.out.println(""+car);
+        if(txtpantalla.getText().length()==0 ){
+            if(car<51 || car>54 ){
+                if(car==8){
+                    
+                }
+                else{
+                  evt.consume();    
+                }
+              
+            }
+           
+        }
+         if(txtpantalla.getText().length()==1 && car!=46){
+             evt.consume();
+         }
+        if(txtpantalla.getText().length()==2 ){
+            int c=(int)txtpantalla.getText().charAt(0);
+            if(c==54){
+                if(car<48 || car>55){
+                 evt.consume();   
+                }
+            }
+             
+         }
+        if(txtpantalla.getText().length()>2){
+             evt.consume();
+         }
     }//GEN-LAST:event_txtpantallaKeyTyped
 
     private void txtpantallaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpantallaKeyPressed
         // TODO add your handling code here:
-        String cadena=txtpantalla.getText();
-         System.out.println(""+evt.getKeyCode());
-         if(cadena.length()==1 && (evt.getKeyCode()>102)){
+       
+       
+    }//GEN-LAST:event_txtpantallaKeyPressed
+
+    private void txtramKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtramKeyTyped
+        // TODO add your handling code here:
+        char tecla=evt.getKeyChar();
+        int car=(int)evt.getKeyChar();
+       
+        if(txtram.getText().length()==0 ){
+            if(car<48 || car>54 ){
+                if(car==8){
+                    
+                }
+                else{
+                  evt.consume();    
+                }
+              
+            }
+           
+        }
+         if(txtram.getText().length()==1 && car!=46){
              evt.consume();
          }
-         else{
+        if(txtram.getText().length()==2 ){
+            int c=(int)txtram.getText().charAt(0);
+            if(c==48){
+                if(car<53 || car>57){
+                 evt.consume();   
+                }
+            }
+            else if(c==54 && car!=48){
+                evt.consume();
+            }
              
          }
-    }//GEN-LAST:event_txtpantallaKeyPressed
+        if(txtram.getText().length()>2){
+             evt.consume();
+         }
+    }//GEN-LAST:event_txtramKeyTyped
+
+    private void txtgarantiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtgarantiaKeyTyped
+        // TODO add your handling code here:
+        char tecla=evt.getKeyChar();
+        int car=(int)evt.getKeyChar();
+        
+        if(txtgarantia.getText().length()==0 ){
+            if(car<49 || car>50 ){
+                if(car==8){
+                    
+                }
+                else{
+                  evt.consume();    
+                }
+              
+            }
+           
+        }
+         if(txtgarantia.getText().length()==1){
+             
+             int c=(int)txtgarantia.getText().charAt(0);
+            if(c==49){
+                if(car<48 || car>57){
+                 evt.consume();   
+                }
+            }
+            else if(c==50){
+                if(car<48 || car>52){
+                 evt.consume();   
+                }
+            }
+         }
+        
+        if(txtgarantia.getText().length()>1){
+             evt.consume();
+         }
+        
+    }//GEN-LAST:event_txtgarantiaKeyTyped
+
+    private void txtprecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprecioKeyTyped
+        // TODO add your handling code here:
+        char tecla=evt.getKeyChar();
+        int car=(int)evt.getKeyChar();
+        
+        if(txtprecio.getText().length()==0 ){
+            if(car<48 || car>57 ){
+                if(car==8){
+                    
+                }
+                else{
+                  evt.consume();    
+                }
+              
+            }
+           
+        }
+         if(txtprecio.getText().length()==1){
+             
+             int c=(int)txtprecio.getText().charAt(0);
+            if(c==48){
+                if(car!=46){
+                 evt.consume();   
+                }
+            }
+            else {
+                  
+                
+            }
+         }
+        if(txtprecio.getText().length()==3){
+             
+             int c=(int)txtprecio.getText().charAt(2);
+            if(c==48){
+                if(car<49 || car>57){
+                 evt.consume();   
+                }
+            }
+            
+         }
+        if(txtprecio.getText().length()>5){
+             evt.consume();
+         }
+        else{
+            
+        }
+    }//GEN-LAST:event_txtprecioKeyTyped
 
     /**
      * @param args the command line arguments
@@ -316,10 +478,10 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField txtgarantia;
     private javax.swing.JTextField txtnucleos;
     private javax.swing.JTextField txtpantalla;
+    private javax.swing.JTextField txtprecio;
+    private javax.swing.JTextField txtram;
     // End of variables declaration//GEN-END:variables
 }
