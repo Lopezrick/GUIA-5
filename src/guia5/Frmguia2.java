@@ -85,7 +85,7 @@ public class Frmguia2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnRegresar);
-        btnRegresar.setBounds(212, 338, 91, 25);
+        btnRegresar.setBounds(212, 338, 120, 25);
 
         txtAMostrar.setColumns(1);
         txtAMostrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -115,7 +115,7 @@ public class Frmguia2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnGuardar);
-        btnGuardar.setBounds(233, 45, 81, 23);
+        btnGuardar.setBounds(233, 45, 100, 23);
 
         txtDato.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtDato.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +142,7 @@ public class Frmguia2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnLimpiar);
-        btnLimpiar.setBounds(212, 295, 93, 25);
+        btnLimpiar.setBounds(212, 295, 120, 25);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

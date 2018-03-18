@@ -70,19 +70,19 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
         jLabel2.setText("Tamaño de pantalla:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(42, 97, 98, 14);
+        jLabel2.setBounds(42, 97, 120, 14);
 
         jLabel3.setText("Cantidad de RAM:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(43, 198, 87, 14);
+        jLabel3.setBounds(43, 198, 120, 14);
 
         jLabel4.setText("Tiempo de garantia:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(43, 236, 96, 14);
+        jLabel4.setBounds(43, 236, 130, 14);
 
         jLabel5.setText("Precio:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(43, 267, 33, 14);
+        jLabel5.setBounds(43, 267, 110, 14);
 
         txtnucleos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,11 +171,11 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
         jLabel7.setText("Marca:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(43, 305, 33, 14);
+        jLabel7.setBounds(43, 305, 40, 14);
 
         cmbmarca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NEXUS", "GOOGLE", "LENOVO", "HUAWEI", "SONY", "APPLE", "SAMSUNG", "ALCATEL", "LG", "OTRA" }));
         getContentPane().add(cmbmarca);
-        cmbmarca.setBounds(94, 302, 73, 20);
+        cmbmarca.setBounds(120, 300, 73, 20);
 
         jLabel8.setText("Camaras:");
         getContentPane().add(jLabel8);
@@ -188,7 +188,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cbxprincipal);
-        cbxprincipal.setBounds(119, 340, 65, 23);
+        cbxprincipal.setBounds(119, 340, 90, 23);
 
         cbxsecundaria.setText("Secundaria");
         cbxsecundaria.addActionListener(new java.awt.event.ActionListener() {
@@ -197,7 +197,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cbxsecundaria);
-        cbxsecundaria.setBounds(202, 340, 79, 23);
+        cbxsecundaria.setBounds(202, 340, 90, 23);
 
         cbxflash.setText("Flash");
         cbxflash.addActionListener(new java.awt.event.ActionListener() {
@@ -206,7 +206,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cbxflash);
-        cbxflash.setBounds(299, 340, 51, 23);
+        cbxflash.setBounds(299, 340, 80, 23);
 
         jButton1.setText("Ejecutar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -215,7 +215,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(158, 396, 73, 23);
+        jButton1.setBounds(180, 400, 90, 23);
 
         txtprincipal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -227,7 +227,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
         jLabel9.setText("Bateria");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(43, 148, 34, 14);
+        jLabel9.setBounds(43, 148, 120, 14);
 
         txtbateria.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -247,7 +247,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(273, 396, 77, 23);
+        jButton2.setBounds(287, 390, 90, 23);
 
         txtsecundaria.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -271,7 +271,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(43, 396, 91, 23);
+        btnlimpiar.setBounds(43, 396, 110, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

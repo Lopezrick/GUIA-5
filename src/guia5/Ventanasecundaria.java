@@ -39,37 +39,37 @@ public class Ventanasecundaria extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        guia1.setText("App guia 1");
+        guia1.setText("App 1");
         guia1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guia1ActionPerformed(evt);
             }
         });
         getContentPane().add(guia1);
-        guia1.setBounds(46, 79, 83, 23);
+        guia1.setBounds(46, 79, 120, 23);
 
-        jButton2.setText("App guia 2");
+        jButton2.setText("App 2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(185, 79, 83, 23);
+        jButton2.setBounds(185, 79, 120, 23);
 
-        jButton3.setText("App guia 3 y 4");
+        jButton3.setText("App 3 y 4");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(108, 120, 101, 23);
+        jButton3.setBounds(108, 120, 150, 23);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setText("Elija la app que desee");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 20, 160, 19);
+        jLabel1.setBounds(70, 20, 240, 19);
 
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +78,7 @@ public class Ventanasecundaria extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salir);
-        salir.setBounds(131, 161, 53, 23);
+        salir.setBounds(131, 161, 110, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

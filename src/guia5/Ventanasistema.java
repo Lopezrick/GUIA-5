@@ -61,11 +61,11 @@ public class Ventanasistema extends javax.swing.JFrame {
 
         jLabel1.setText("Usuario");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 60, 36, 14);
+        jLabel1.setBounds(30, 60, 100, 14);
 
         jLabel2.setText("Contraseña");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 129, 56, 14);
+        jLabel2.setBounds(10, 129, 130, 14);
 
         btningresar.setText("Ingresar");
         btningresar.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +74,7 @@ public class Ventanasistema extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btningresar);
-        btningresar.setBounds(138, 181, 73, 23);
+        btningresar.setBounds(111, 181, 120, 23);
 
         pasword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

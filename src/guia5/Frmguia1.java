@@ -56,7 +56,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(area);
-        area.setBounds(53, 81, 145, 23);
+        area.setBounds(53, 81, 200, 23);
 
         perimetro.setText("Perimetro de un circulo");
         perimetro.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +65,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(perimetro);
-        perimetro.setBounds(53, 122, 141, 23);
+        perimetro.setBounds(53, 122, 200, 23);
 
         volumenE.setText("Volumen de una esfera");
         volumenE.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +74,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(volumenE);
-        volumenE.setBounds(53, 163, 143, 23);
+        volumenE.setBounds(53, 163, 200, 23);
 
         volumenC.setText("Volumen de un cubo");
         volumenC.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +83,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(volumenC);
-        volumenC.setBounds(53, 204, 129, 23);
+        volumenC.setBounds(53, 204, 200, 23);
 
         media.setText("Promedio de 10 datos");
         media.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(media);
-        media.setBounds(54, 245, 137, 23);
+        media.setBounds(54, 245, 200, 23);
 
         salir.setText("salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salir);
-        salir.setBounds(140, 279, 51, 23);
+        salir.setBounds(180, 290, 70, 23);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class Frmguia1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(53, 279, 77, 23);
+        jButton1.setBounds(50, 290, 100, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
