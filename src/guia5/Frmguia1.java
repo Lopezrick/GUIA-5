@@ -18,7 +18,7 @@ public class Frmguia1 extends javax.swing.JFrame {
     public Frmguia1() {
         initComponents();
         setLocationRelativeTo(null);
-        setResizable(false);
+        
         setTitle("App guia 1");
     }
 
@@ -41,8 +41,13 @@ public class Frmguia1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("¿Que desea calcular?");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(53, 49, 160, 19);
 
         area.setText("Area de un cuadrilatero");
         area.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +55,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 areaActionPerformed(evt);
             }
         });
+        getContentPane().add(area);
+        area.setBounds(53, 81, 145, 23);
 
         perimetro.setText("Perimetro de un circulo");
         perimetro.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +64,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 perimetroActionPerformed(evt);
             }
         });
+        getContentPane().add(perimetro);
+        perimetro.setBounds(53, 122, 141, 23);
 
         volumenE.setText("Volumen de una esfera");
         volumenE.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +73,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 volumenEActionPerformed(evt);
             }
         });
+        getContentPane().add(volumenE);
+        volumenE.setBounds(53, 163, 143, 23);
 
         volumenC.setText("Volumen de un cubo");
         volumenC.addActionListener(new java.awt.event.ActionListener() {
@@ -71,6 +82,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 volumenCActionPerformed(evt);
             }
         });
+        getContentPane().add(volumenC);
+        volumenC.setBounds(53, 204, 129, 23);
 
         media.setText("Promedio de 10 datos");
         media.addActionListener(new java.awt.event.ActionListener() {
@@ -78,6 +91,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 mediaActionPerformed(evt);
             }
         });
+        getContentPane().add(media);
+        media.setBounds(54, 245, 137, 23);
 
         salir.setText("salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +100,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
+        getContentPane().add(salir);
+        salir.setBounds(140, 279, 51, 23);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,48 +109,8 @@ public class Frmguia1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(volumenC)
-                    .addComponent(volumenE)
-                    .addComponent(perimetro)
-                    .addComponent(area)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(salir))
-                        .addComponent(media)))
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(area)
-                .addGap(18, 18, 18)
-                .addComponent(perimetro)
-                .addGap(18, 18, 18)
-                .addComponent(volumenE)
-                .addGap(18, 18, 18)
-                .addComponent(volumenC)
-                .addGap(18, 18, 18)
-                .addComponent(media)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salir)
-                    .addComponent(jButton1))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        getContentPane().add(jButton1);
+        jButton1.setBounds(53, 279, 77, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

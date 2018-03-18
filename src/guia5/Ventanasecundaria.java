@@ -18,6 +18,7 @@ public class Ventanasecundaria extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Acciones");
+        
     }
 
     /**
@@ -36,6 +37,7 @@ public class Ventanasecundaria extends javax.swing.JFrame {
         salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         guia1.setText("App guia 1");
         guia1.addActionListener(new java.awt.event.ActionListener() {
@@ -43,6 +45,8 @@ public class Ventanasecundaria extends javax.swing.JFrame {
                 guia1ActionPerformed(evt);
             }
         });
+        getContentPane().add(guia1);
+        guia1.setBounds(46, 79, 83, 23);
 
         jButton2.setText("App guia 2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +54,8 @@ public class Ventanasecundaria extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(185, 79, 83, 23);
 
         jButton3.setText("App guia 3 y 4");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -57,8 +63,13 @@ public class Ventanasecundaria extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(108, 120, 101, 23);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setText("Elija la app que desee");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(70, 20, 160, 19);
 
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -66,46 +77,8 @@ public class Ventanasecundaria extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(guia1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(46, 46, 46))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(1, 1, 1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(salir)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel1)
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(guia1)
-                    .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
-                .addComponent(salir)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        getContentPane().add(salir);
+        salir.setBounds(131, 161, 53, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

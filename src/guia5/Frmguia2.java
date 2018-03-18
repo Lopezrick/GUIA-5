@@ -55,7 +55,7 @@ public class Frmguia2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Guía 2");
-        setResizable(false);
+        getContentPane().setLayout(null);
 
         btnOrdena.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnOrdena.setText("Ordenar datos");
@@ -64,6 +64,8 @@ public class Frmguia2 extends javax.swing.JFrame {
                 btnOrdenaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnOrdena);
+        btnOrdena.setBounds(212, 125, 123, 25);
 
         btnMostrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnMostrar.setText("Mostrar datos");
@@ -72,6 +74,8 @@ public class Frmguia2 extends javax.swing.JFrame {
                 btnMostrarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnMostrar);
+        btnMostrar.setBounds(212, 168, 123, 25);
 
         btnRegresar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnRegresar.setText("Regresar ");
@@ -80,14 +84,23 @@ public class Frmguia2 extends javax.swing.JFrame {
                 btnRegresarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnRegresar);
+        btnRegresar.setBounds(212, 338, 91, 25);
 
         txtAMostrar.setColumns(1);
         txtAMostrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtAMostrar.setRows(10);
         jScrollPane1.setViewportView(txtAMostrar);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(68, 125, 94, 229);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setText("Introduzca 10 letras:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 40, 150, 19);
+        getContentPane().add(ProgressBar);
+        ProgressBar.setBounds(102, 86, 174, 21);
 
         btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnGuardar.setText("Guardar");
@@ -101,6 +114,8 @@ public class Frmguia2 extends javax.swing.JFrame {
                 btnGuardarKeyTyped(evt);
             }
         });
+        getContentPane().add(btnGuardar);
+        btnGuardar.setBounds(233, 45, 81, 23);
 
         txtDato.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtDato.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +131,8 @@ public class Frmguia2 extends javax.swing.JFrame {
                 txtDatoKeyTyped(evt);
             }
         });
+        getContentPane().add(txtDato);
+        txtDato.setBounds(163, 38, 52, 30);
 
         btnLimpiar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLimpiar.setText("Limpiar");
@@ -124,63 +141,8 @@ public class Frmguia2 extends javax.swing.JFrame {
                 btnLimpiarActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(txtDato, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnGuardar)
-                .addContainerGap(31, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnOrdena, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnRegresar)
-                                .addComponent(btnLimpiar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(ProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtDato, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(ProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnOrdena)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMostrar)
-                        .addGap(102, 102, 102)
-                        .addComponent(btnLimpiar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRegresar))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        getContentPane().add(btnLimpiar);
+        btnLimpiar.setBounds(212, 295, 93, 25);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
