@@ -44,13 +44,16 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         txtprecio = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cmbmarca = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         pricipal = new javax.swing.JCheckBox();
         secundaria = new javax.swing.JCheckBox();
         flash = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         txtpixels = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtbateria = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,6 +103,11 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
 
+        txtgarantia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtgarantiaActionPerformed(evt);
+            }
+        });
         txtgarantia.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtgarantiaKeyTyped(evt);
@@ -121,7 +129,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
         jLabel7.setText("Marca:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NEXUS", "PIXIE", "LENOVO", "HUAWEI", "SONY", "APPLE", "SAMSUNG", "ALCATEL", "LG", "OTRA" }));
+        cmbmarca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NEXUS", "GOOGLE", "LENOVO", "HUAWEI", "SONY", "APPLE", "SAMSUNG", "ALCATEL", "LG", "OTRA" }));
 
         jLabel8.setText("Camaras:");
 
@@ -159,6 +167,21 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setText("Bateria");
+
+        txtbateria.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtbateriaKeyTyped(evt);
+            }
+        });
+
+        jButton2.setText("Regresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -169,49 +192,57 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                         .addGap(155, 155, 155)
                         .addComponent(jLabel6))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel7)
-                                    .addGap(27, 27, 27)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel1))
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(112, 112, 112))
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel4))
-                                        .addGap(62, 62, 62)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtgarantia, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                            .addComponent(txtprecio)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel2)
-                                                .addComponent(jLabel3))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(txtram, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                                .addComponent(txtpantalla)))
-                                        .addComponent(txtnucleos, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cmbmarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel9)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel3)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtram, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel4)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtgarantia, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel5)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtnucleos, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
                                             .addComponent(jLabel8)
-                                            .addGap(31, 31, 31)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(pricipal)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(secundaria))
-                                                .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(10, 10, 10)
-                                .addComponent(flash))))
+                                            .addGap(30, 30, 30)
+                                            .addComponent(pricipal)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(secundaria)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtbateria)
+                                    .addComponent(txtpantalla, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(flash))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(145, 145, 145)
-                        .addComponent(jButton1)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                        .addComponent(jButton1)
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton2)))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,33 +257,39 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtpantalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtbateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtram, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtgarantia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                    .addComponent(cmbmarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(pricipal)
                     .addComponent(secundaria)
+                    .addComponent(pricipal)
                     .addComponent(flash))
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                 .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(37, 37, 37))
         );
 
         pack();
@@ -273,7 +310,31 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     }//GEN-LAST:event_txtprecioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       /*Analizar p=new Analizar();
+       int bateria=Integer.parseInt(txtbateria.getText());
+       double pantalla=Double.parseDouble(txtpantalla.getText());
+       int cpu= Integer.parseInt(txtnucleos.getText());
+       double ram=Double.parseDouble(txtram.getText());
+       int garantia= Integer.parseInt(txtgarantia.getText());
+       double precio=Double.parseDouble(txtprecio.getText());
+       int marca=cmbmarca.getSelectedIndex();
+       double pixels=Double.parseDouble(txtpixels.getText());
+       if(flash.isSelected()){
+          p.setFlash(true);
+       }
+       else{
+           p.setFlash(false);
+       }
+       p.setBateria(bateria);
+       p.setCpu(cpu);
+       p.setGarantia(garantia);
+       p.setMarca(marca);
+       p.setPantalla(pantalla);
+       p.setPixels(pixels);
+       p.setPrecio(precio);
+       p.setRam(ram);
+       p.mostrar();*/
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     int contador=0;
@@ -418,7 +479,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         int car=(int)evt.getKeyChar();
         
         if(txtgarantia.getText().length()==0 ){
-            if(car<49 || car>50 ){
+            if(car<49 || car>57 ){
                 if(car==8){
                     
                 }
@@ -438,9 +499,12 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                 }
             }
             else if(c==50){
-                if(car<48 || car>52){
+                if(car<=48 || car>52){
                  evt.consume();   
                 }
+            }
+            else{
+                evt.consume();
             }
          }
         
@@ -452,7 +516,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
     private void txtprecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprecioKeyTyped
         // TODO add your handling code here:
-        char tecla=evt.getKeyChar();
+        
         int car=(int)evt.getKeyChar();
         
         if(txtprecio.getText().length()==0 ){
@@ -569,6 +633,28 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txtpixelsKeyTyped
 
+    private void txtbateriaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtbateriaKeyTyped
+        char tecla=evt.getKeyChar();
+        if(!Character.isDigit(tecla)){
+            evt.consume();
+        }
+        if(txtbateria.getText().length()>3){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtbateriaKeyTyped
+
+    private void txtgarantiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgarantiaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtgarantiaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Ventanasecundaria v= new Ventanasecundaria();
+        v.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -605,9 +691,10 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cmbmarca;
     private javax.swing.JCheckBox flash;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -616,8 +703,10 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JCheckBox pricipal;
     private javax.swing.JCheckBox secundaria;
+    private javax.swing.JTextField txtbateria;
     private javax.swing.JTextField txtgarantia;
     private javax.swing.JTextField txtnucleos;
     private javax.swing.JTextField txtpantalla;
