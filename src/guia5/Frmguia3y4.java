@@ -6,6 +6,7 @@
 package guia5;
 
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Frmguia3y4 extends javax.swing.JFrame {
      */
     public Frmguia3y4() {
         initComponents();
-        txtpixels.setEnabled(false);
+        txtprincipal.setEnabled(false);
         setLocationRelativeTo(null);
         setTitle("App guia 3 y 4");
     }
@@ -46,14 +47,17 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         cmbmarca = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
-        pricipal = new javax.swing.JCheckBox();
-        secundaria = new javax.swing.JCheckBox();
-        flash = new javax.swing.JCheckBox();
+        cbxprincipal = new javax.swing.JCheckBox();
+        cbxsecundaria = new javax.swing.JCheckBox();
+        cbxflash = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
-        txtpixels = new javax.swing.JTextField();
+        txtprincipal = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         txtbateria = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        txtsecundaria = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        texto = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,24 +137,24 @@ public class Frmguia3y4 extends javax.swing.JFrame {
 
         jLabel8.setText("Camaras:");
 
-        pricipal.setText("Principal");
-        pricipal.addActionListener(new java.awt.event.ActionListener() {
+        cbxprincipal.setText("Principal");
+        cbxprincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pricipalActionPerformed(evt);
+                cbxprincipalActionPerformed(evt);
             }
         });
 
-        secundaria.setText("Secundaria");
-        secundaria.addActionListener(new java.awt.event.ActionListener() {
+        cbxsecundaria.setText("Secundaria");
+        cbxsecundaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                secundariaActionPerformed(evt);
+                cbxsecundariaActionPerformed(evt);
             }
         });
 
-        flash.setText("Flash");
-        flash.addActionListener(new java.awt.event.ActionListener() {
+        cbxflash.setText("Flash");
+        cbxflash.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                flashActionPerformed(evt);
+                cbxflashActionPerformed(evt);
             }
         });
 
@@ -161,9 +165,9 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
 
-        txtpixels.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtprincipal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtpixelsKeyTyped(evt);
+                txtprincipalKeyTyped(evt);
             }
         });
 
@@ -182,27 +186,26 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
         });
 
+        txtsecundaria.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtsecundariaKeyTyped(evt);
+            }
+        });
+
+        texto.setColumns(20);
+        texto.setRows(5);
+        jScrollPane1.setViewportView(texto);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(77, 77, 77)
-                                .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(112, 112, 112))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel7)
@@ -226,23 +229,40 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jLabel8)
                                             .addGap(30, 30, 30)
-                                            .addComponent(pricipal)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(cbxprincipal)
+                                                .addComponent(txtprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGap(18, 18, 18)
-                                            .addComponent(secundaria)))))
-                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtsecundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(cbxsecundaria))))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtbateria)
                                     .addComponent(txtpantalla, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))))
                         .addGap(18, 18, 18)
-                        .addComponent(flash))
+                        .addComponent(cbxflash))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(155, 155, 155)
+                                .addComponent(jLabel6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(jButton1)
-                        .addGap(51, 51, 51)
-                        .addComponent(jButton2)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(42, 42, 42)
+                                .addComponent(jButton2)))))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,26 +300,30 @@ public class Frmguia3y4 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(secundaria)
-                    .addComponent(pricipal)
-                    .addComponent(flash))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-                .addComponent(txtpixels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                    .addComponent(cbxsecundaria)
+                    .addComponent(cbxprincipal)
+                    .addComponent(cbxflash))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(37, 37, 37))
+                    .addComponent(txtprincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtsecundaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pricipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pricipalActionPerformed
+    private void cbxprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxprincipalActionPerformed
         // TODO add your handling code here:
-        txtpixels.setEnabled(true);
-        txtpixels.requestFocus();
-    }//GEN-LAST:event_pricipalActionPerformed
+        txtprincipal.setEnabled(true);
+        txtprincipal.requestFocus();
+    }//GEN-LAST:event_cbxprincipalActionPerformed
 
     private void txtpantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpantallaActionPerformed
         // TODO add your handling code here:
@@ -309,31 +333,179 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtprecioActionPerformed
 
+    public double BateriaPantalla() {
+        double puntajeBP = 0;
+        double comp = Double.parseDouble(txtpantalla.getText());
+        double ma = Double.parseDouble(txtbateria.getText());
+        if (comp <= 4) {
+            if (ma == 1200) {
+                puntajeBP = 3;
+            } else if (ma > 1200 && ma < 2400) {
+                puntajeBP = 4;
+            } else if (ma > 2400 && ma < 3100) {
+                puntajeBP = 5;
+            } else if (ma > 3100) {
+                puntajeBP = 6;
+            }
+        } else if (comp == 5) {
+            if (ma <= 1200) {
+                puntajeBP = 1;
+            } else if (ma > 1200 && ma < 2400) {
+                puntajeBP = 2;
+            } else if (ma > 2400 && ma < 3100) {
+                puntajeBP = 3;
+            } else if (ma > 3100) {
+                puntajeBP = 4;
+            }
+        }
+        return puntajeBP;
+    }
+
+    public int refDeMarca() {
+        int ref = 0;
+        if (cmbmarca.getSelectedItem() == "NEXUS" || cmbmarca.getSelectedItem() == "GOOGLE" || cmbmarca.getSelectedItem() == "LENOVO" || cmbmarca.getSelectedItem() == "HUAWEI" || cmbmarca.getSelectedItem() == "SONY" || cmbmarca.getSelectedItem() == "APPLE") {
+            ref = 4;
+        } else if (cmbmarca.getSelectedItem() == "SAMSUNG" || cmbmarca.getSelectedItem() == "ALCATEL" || cmbmarca.getSelectedItem() == "LG") {
+            ref = 3;
+        } else {
+            ref = 2;
+        }
+
+        return ref;
+    }
+
+    public double rangoPrecio() {
+        double rango = 0;
+        double precio = Double.parseDouble(txtprecio.getText());
+        if (precio < 100) {
+            rango = 2;
+        } else if (precio >= 100 && precio <= 350) {
+            rango = 3;
+        } else if (precio > 350) {
+            rango = 4;
+        }
+        return rango;
+    }
+
+    public double pixelaje() {
+        double pixel = 0;
+        int camarap = Integer.parseInt(txtprincipal.getText());
+        int camaras = Integer.parseInt(txtsecundaria.getText());
+        if (camarap <= 5) {
+            if (camaras <= 2) {
+                pixel = 1;
+            } else if (camaras > 2) {
+                pixel = 2;
+            }
+
+        } else if (camarap > 5 && camarap <= 8) {
+            if (camaras < 2) {
+                pixel = 1;
+            } else if (camaras >= 2 && camaras <= 3) {
+                pixel = 2;
+            } else if (camaras > 3) {
+                pixel = 3;
+            }
+        } else if (camarap > 8) {
+            if (camaras < 2) {
+                pixel = 1;
+            } else if (camaras >= 2 && camaras < 5) {
+                pixel = 2;
+            } else if (camaras > 5) {
+                pixel = 3;
+            }
+
+        } else {
+            pixel = pixel - 1;
+        }
+
+        return pixel;
+    }
+
+    public double garantia() {
+        double garan = 0;
+        int gara = Integer.parseInt(txtgarantia.getText());
+        if (gara <= 3) {
+            garan = 1;
+        } else if (gara > 3 && gara < 6) {
+            garan = 2;
+        } else if (gara > 6) {
+            garan = 4;
+        }
+
+        return garan;
+    }
+
+    public double CPU() {
+        double cpu = 0;
+        int valor = Integer.parseInt(txtnucleos.getText());
+        if (valor == 2) {
+            cpu = 0;
+        } else if (valor == 4) {
+            cpu = 1;
+        } else if (valor == 6) {
+            cpu = 2;
+        } else if (valor == 8) {
+            cpu = 3;
+        }
+        return cpu;
+    }
+
+    public double Ram() {
+        double ram = 0.0;
+        int Ram1 = Integer.parseInt(txtram.getText());
+        if (Ram1 <= 1) {
+            ram = 0;
+        } else if (Ram1 > 1 && Ram1 < 2) {
+            ram = 2;
+        } else if (Ram1 > 2 && Ram1 < 4) {
+            ram = 4;
+        } else if (Ram1 > 4) {
+            ram = 6;
+        }
+        return ram;
+    }
+
+    public void Impresion() {
+        double impre = 0;
+        impre = BateriaPantalla() + refDeMarca() + rangoPrecio() + pixelaje() + garantia() + CPU() + Ram();
+        if (impre <= 7) {
+            JOptionPane.showMessageDialog(this, "No es buena inversion");
+        } else if (impre > 7 && impre <= 14) {
+            JOptionPane.showMessageDialog(null, "Inversion de Riesgo");
+        } else if (impre >= 15 && impre < 21) {
+            JOptionPane.showMessageDialog(this, "Inversion viable");
+        } else if (impre > 22) {
+            JOptionPane.showMessageDialog(this, "Buena Inversion");
+        }
+
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       /*Analizar p=new Analizar();
-       int bateria=Integer.parseInt(txtbateria.getText());
-       double pantalla=Double.parseDouble(txtpantalla.getText());
-       int cpu= Integer.parseInt(txtnucleos.getText());
-       double ram=Double.parseDouble(txtram.getText());
-       int garantia= Integer.parseInt(txtgarantia.getText());
-       double precio=Double.parseDouble(txtprecio.getText());
-       int marca=cmbmarca.getSelectedIndex();
-       double pixels=Double.parseDouble(txtpixels.getText());
-       if(flash.isSelected()){
-          p.setFlash(true);
-       }
-       else{
-           p.setFlash(false);
-       }
-       p.setBateria(bateria);
-       p.setCpu(cpu);
-       p.setGarantia(garantia);
-       p.setMarca(marca);
-       p.setPantalla(pantalla);
-       p.setPixels(pixels);
-       p.setPrecio(precio);
-       p.setRam(ram);
-       p.mostrar();*/
+       if (txtnucleos.getText().isEmpty() || txtbateria.getText().isEmpty() || txtgarantia.getText().isEmpty() || txtprecio.getText().isEmpty() || txtprincipal.getText().isEmpty() || txtram.getText().isEmpty() || txtsecundaria.getText().isEmpty() || txtpantalla.getText().isEmpty() || txtprecio.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Llene los campos antes de Ejecutar el programa");
+        } else {
+            String cpu;
+            cpu = txtnucleos.getText();
+
+            if (cbxprincipal.isSelected() && cbxsecundaria.isSelected() && cbxflash.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara principal de " + txtprincipal.getText() + ", secundaria de " + txtsecundaria.getText() + " y flash");
+            } else if (cbxprincipal.isSelected() && cbxsecundaria.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara principal de " + txtprincipal.getText() + " y secundaria de " + txtsecundaria.getText());
+            } else if (cbxprincipal.isSelected() && cbxflash.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara principal de " + txtprincipal.getText() + " y flash");
+            } else if (cbxsecundaria.isSelected() && cbxflash.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara secundaria de " + txtsecundaria.getText() + " y flash");
+            } else if (cbxprincipal.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara principal de " + txtprincipal.getText());
+            } else if (cbxsecundaria.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara secundaria de " + txtsecundaria.getText());
+            } else if (cbxflash.isSelected()) {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara con flash");
+            } else {
+                texto.setText("Su numero de cpu es: " + cpu + "\nEl tamaño de la pantalla es: " + txtpantalla.getText() + "\nLa memoria RAM es de: " + txtram.getText() + "\nLa garantia es de: " + txtgarantia.getText() + "\nEl precio es de: " + txtprecio.getText() + "\nLa marca es: " + cmbmarca.getSelectedItem() + "\nPosee camara principal de " + txtprincipal.getText() + ", secundaria de " + txtsecundaria.getText() + "y flash");
+            }
+            Impresion();
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -588,23 +760,23 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtramActionPerformed
 
-    private void secundariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_secundariaActionPerformed
+    private void cbxsecundariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxsecundariaActionPerformed
         // TODO add your handling code here:
-         txtpixels.setEnabled(true);
-        txtpixels.requestFocus();
-    }//GEN-LAST:event_secundariaActionPerformed
+         txtprincipal.setEnabled(true);
+        txtprincipal.requestFocus();
+    }//GEN-LAST:event_cbxsecundariaActionPerformed
 
-    private void flashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_flashActionPerformed
+    private void cbxflashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxflashActionPerformed
         // TODO add your handling code here:
-         txtpixels.setEnabled(true);
-        txtpixels.requestFocus();
-    }//GEN-LAST:event_flashActionPerformed
+         txtprincipal.setEnabled(true);
+        txtprincipal.requestFocus();
+    }//GEN-LAST:event_cbxflashActionPerformed
 
-    private void txtpixelsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpixelsKeyTyped
+    private void txtprincipalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprincipalKeyTyped
         // TODO add your handling code here:
         int car=(int)evt.getKeyChar();
        
-        if(txtpixels.getText().length()==0 ){
+        if(txtprincipal.getText().length()==0 ){
             if(car<48 || car>57 ){
                 if(car==8){
                     
@@ -616,22 +788,22 @@ public class Frmguia3y4 extends javax.swing.JFrame {
             }
            
         }
-         if(txtpixels.getText().length()!=0){
+         if(txtprincipal.getText().length()!=0){
             if(car==46){
-                for(int i=0;i<txtpixels.getText().length();i++){
-              int posicion=(int)txtpixels.getText().charAt(i);
+                for(int i=0;i<txtprincipal.getText().length();i++){
+              int posicion=(int)txtprincipal.getText().charAt(i);
               if(posicion==46){
                   evt.consume();
               }
             }
             }
          }
-         if(txtpixels.getText().length()>3){
+         if(txtprincipal.getText().length()>3){
              evt.consume();
          }
         
         
-    }//GEN-LAST:event_txtpixelsKeyTyped
+    }//GEN-LAST:event_txtprincipalKeyTyped
 
     private void txtbateriaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtbateriaKeyTyped
         char tecla=evt.getKeyChar();
@@ -654,6 +826,10 @@ public class Frmguia3y4 extends javax.swing.JFrame {
         v.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtsecundariaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsecundariaKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtsecundariaKeyTyped
 
     /**
      * @param args the command line arguments
@@ -691,8 +867,10 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox cbxflash;
+    private javax.swing.JCheckBox cbxprincipal;
+    private javax.swing.JCheckBox cbxsecundaria;
     private javax.swing.JComboBox<String> cmbmarca;
-    private javax.swing.JCheckBox flash;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -704,14 +882,15 @@ public class Frmguia3y4 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JCheckBox pricipal;
-    private javax.swing.JCheckBox secundaria;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea texto;
     private javax.swing.JTextField txtbateria;
     private javax.swing.JTextField txtgarantia;
     private javax.swing.JTextField txtnucleos;
     private javax.swing.JTextField txtpantalla;
-    private javax.swing.JTextField txtpixels;
     private javax.swing.JTextField txtprecio;
+    private javax.swing.JTextField txtprincipal;
     private javax.swing.JTextField txtram;
+    private javax.swing.JTextField txtsecundaria;
     // End of variables declaration//GEN-END:variables
 }
